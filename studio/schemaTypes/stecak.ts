@@ -14,6 +14,17 @@ export const stecakType = defineType({
     }),
 
     defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+
+    defineField({
       name: 'location',
       title: 'Location',
       type: 'string',
